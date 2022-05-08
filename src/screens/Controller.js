@@ -7,19 +7,18 @@ import Confirmation from '../screens/confirmation/Confirmation'
 
 class Controller extends Component {
 
-  constructor()
-  {
+  constructor() {
     super();
-    this.baseUrl = "http://18.212.74.66:8080/api/v1/";
+    this.baseUrl = "http://localhost:8080/api/v1/";
   }
-  render(){
-    return(
+  render() {
+    return (
       <Router>
-         <div className="main-container">
-     	      <Route exact path='/' render={(props) => <Home {...props} baseUrl = {this.baseUrl}/> }  />
-            <Route path='/movie/:id' render={(props) => <Details {...props} baseUrl = {this.baseUrl} /> } />
-            <Route path='/bookshow/:id' render={(props) => <BookShow {...props} baseUrl = {this.baseUrl} /> } />
-            <Route path='/confirm/:id' render={(props) => <Confirmation {...props} baseUrl = {this.baseUrl}  /> } />
+        <div className="main-container">
+          <Route exact path='/' render={(props) => <Home {...props} baseUrl={this.baseUrl} />} />
+          <Route path='/movie/:id' render={(props) => <Details {...props} baseUrl={this.baseUrl} />} />
+          <Route path='/bookshow/:id' render={(props) => <BookShow {...props} baseUrl={this.baseUrl} />} />
+          <Route path='/confirm/:id' render={(props) => <Confirmation {...props} baseUrl={this.baseUrl} />} />
         </div>
       </Router>
 
